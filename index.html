@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Amorzinho - Sabrina 💘</title>
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #9370DB;
+            font-family: 'Great Vibes', cursive;
+            text-align: center;
+            color: #4B0082;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 5em;
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 1em;
+            margin-top: 10px;
+            color: #eeebf0;
+        }
+
+        .foto-bloco {
+            background: #40014e;
+            border: 2px dashed #ff99cc;
+            border-radius: 15px;
+            padding: 30px 15px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 4px 10px rgba(255, 192, 203, 0.4);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .foto {
+            width: 180px;
+            height: 180px;
+            border: 5px solid #ffccdd;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 4px 4px 10px #ffccd5;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .foto:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .contador {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+
+        audio {
+            margin-top: 30px;
+        }
+
+        .mensagem {
+            margin-top: 70px;
+            font-style: italic;
+            font-size: 2em;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+        }
+
+        .modal video,
+        .modal img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>💘 Sabrina Jutkoski & Alexsander Iloy 💘</h1>
+
+    <!-- EXEMPLO DE BLOCO -->
+    <div class="foto-bloco">
+        <div class="section-title">📍 INICIO DE TUDO 📍</div>
+        <div class="gallery">
+            <img src="fotos/start/i1.jpg" class="foto">
+            <img src="fotos/start/i2.jpeg" class="foto">
+            <img src="fotos/start/i3.jpg" class="foto">
+            <img src="fotos/start/i4.jpg" class="foto">
+            <img src="fotos/start/i5.jpg" class="foto">
+            <img src="fotos/start/i6.jpg" class="foto">
+            <img src="fotos/start/i7.jpg" class="foto">
+        </div>
+    </div>
+
+    <div class="foto-bloco">
+        <div class="section-title">💘 PRIMEIROS DIAS AO SEU LADO 💘</div>
+        <div class="gallery">
+            <img src="fotos/start/s1.jpg" class="foto">
+            <img src="fotos/start/s2.jpg" class="foto">
+            <img src="fotos/start/s3.jpg" class="foto">
+            <img src="fotos/start/s4.jpg" class="foto">
+            <img src="fotos/start/s5.jpg" class="foto">
+            <img src="fotos/start/s6.jpg" class="foto">
+            <img src="fotos/start/s7.jpg" class="foto">
+            <img src="fotos/start/s8.jpg" class="foto">
+            <img src="fotos/start/s9.jpg" class="foto">
+            <img src="fotos/start/s10.jpg" class="foto">
+            <img src="fotos/start/s11.jpg" class="foto">
+        </div>
+    </div>
+
+    <div class="foto-bloco">
+        <div class="section-title">💘 O GRANDE DIA 11/04/2024 💘</div>
+        <div class="gallery">
+            <img src="fotos/gdia/gd1.jpg" class="foto">
+            <img src="fotos/gdia/gd2.jpg" class="foto">
+            <img src="fotos/gdia/gd3.jpg" class="foto">
+            <img src="fotos/gdia/gd4.jpg" class="foto">
+            <img src="fotos/gdia/gd5.jpg" class="foto">
+            <img src="fotos/gdia/gd6.jpg" class="foto">
+            <img src="fotos/gdia/gd7.jpg" class="foto">
+            <img src="fotos/gdia/gd8.jpg" class="foto">
+            <video src="fotos/gdia/gdv.mp4" class="foto" controls></video>
+        </div>
+    </div>
+
+    <div class="foto-bloco">
+        <div class="section-title">💘 CASAMENTO DA CUNHADINHA 💘</div>
+        <div class="gallery">
+            <img src="fotos/casamento/c1.webp" class="foto">
+            <img src="fotos/casamento/c2.webp" class="foto">
+            <img src="fotos/casamento/c3.webp" class="foto">
+            <img src="fotos/casamento/c4.webp" class="foto">
+            <img src="fotos/casamento/c5.jpg" class="foto">
+            <video src="fotos/casamento/vc1.mp4" class="foto" controls></video>
+        </div>
+    </div>
+
+    <div class="foto-bloco">
+        <div class="section-title">💘 DIAS MARAVILHOSOS AO SEU LADO 💘</div>
+        <div class="gallery">
+            <img src="fotos/outros/o16.jpg" class="foto">
+            <img src="fotos/outros/o17.jpg" class="foto">
+            <img src="fotos/outros/o18.jpg" class="foto">
+            <img src="fotos/outros/o19.jpg" class="foto">
+            <img src="fotos/outros/o20.jpg" class="foto">
+            <img src="fotos/outros/o21.jpg" class="foto">
+            <video src="fotos/outros/ov.mp4" class="foto" controls></video>
+            <video src="fotos/outros/ov2.mp4" class="foto" controls></video>
+        </div>
+    </div>
+
+    <div class="foto-bloco">
+        <div class="section-title">📍 ERREJOTA</div>
+        <div class="gallery">
+            <img src="fotos/errejota/rj1.jpg" class="foto">
+            <img src="fotos/errejota/rj2.jpg" class="foto">
+            <img src="fotos/errejota/rj3.jpg" class="foto">
+            <img src="fotos/errejota/rj4.jpg" class="foto">
+            <img src="fotos/errejota/rj5.jpg" class="foto">
+            <img src="fotos/errejota/rj6.jpg" class="foto">
+            <img src="fotos/errejota/rj7.webp" class="foto">
+            <img src="fotos/errejota/rj8.jpg" class="foto">
+            <img src="fotos/errejota/rj9.jpg" class="foto">
+            <img src="fotos/errejota/rj10.jpg" class="foto">
+            <img src="fotos/errejota/rj11.jpg" class="foto">
+            <img src="fotos/errejota/rj12.jpg" class="foto">
+            <img src="fotos/errejota/rj13.jpg" class="foto">
+            <img src="fotos/errejota/rj14.jpg" class="foto">
+            <img src="fotos/errejota/rj15.jpg" class="foto">
+            <img src="fotos/errejota/rj16.jpg" class="foto">
+            <img src="fotos/errejota/rj17.jpg" class="foto">
+            <img src="fotos/errejota/rj18.jpg" class="foto">
+            <img src="fotos/errejota/rj19.jpg" class="foto">
+            <img src="fotos/errejota/rj20.jpg" class="foto">
+            <img src="fotos/errejota/rj21.jpg" class="foto">
+        </div>
+    </div>
+
+    <div class="foto-bloco">
+        <div class="section-title">💘 2025 💘</div>
+        <div class="gallery">
+            <img src="fotos/2025/a1.jpg" class="foto">
+            <img src="fotos/2025/a2.jpg" class="foto">
+            <img src="fotos/2025/a3.jpg" class="foto">
+        </div>
+    </div>
+
+    <div class="section-title">🎶 Música</div>
+    <audio controls>
+        <source src="musica.mp3" type="audio/mp3">
+        Seu navegador não suporta áudio 😢
+    </audio>
+
+    <div class="contador">
+        Estamos juntos há:<br>
+        <b id="dias">xxx</b> dias 💞
+    </div>
+
+    <div class="mensagem">
+        💌 Te amo pra sempre, minha vida!<br>
+        Obrigado por cada momento incrível ao seu lado! 💝
+    </div>
+
+    <!-- Botão de vídeo especial -->
+    <button class="video-button" onclick="abrirModalVideo()">💖 Assistir vídeo especial 💖</button>
+
+    <!-- Modal padrão (para fotos e vídeos da galeria) -->
+    <div class="modal" id="popupModal" onclick="fecharModal()">
+        <img id="modalImg" class="modal-content" />
+        <video id="modalVid" class="modal-content" controls></video>
+    </div>
+
+    <!-- Modal exclusivo do vídeo especial -->
+    <div class="modal" id="videoEspecialModal" onclick="fecharModalVideo()">
+        <video id="videoEspecial" class="modal-content" controls></video>
+    </div>
+
+    <style>
+        .video-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            background-color: #ffccdd;
+            color: #4B0082;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            margin: 50px auto;
+            display: inline-block;
+        }
+    </style>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Contador de dias
+        const inicio = new Date("2024-04-11");
+        const hoje = new Date();
+        const diffTime = hoje - inicio;
+        const dias = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        document.getElementById("dias").innerText = dias;
+
+        // Modal padrão
+        const modal = document.getElementById('popupModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalVid = document.getElementById('modalVid');
+
+        document.querySelectorAll('img.foto').forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalVid.style.display = 'none';
+                modalImg.style.display = 'block';
+                modalImg.src = img.src;
+            });
+        });
+
+        document.querySelectorAll('video.foto').forEach(video => {
+            video.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.style.display = 'flex';
+                modalImg.style.display = 'none';
+                modalVid.style.display = 'block';
+                modalVid.src = video.src;
+            });
+        });
+
+        function fecharModal() {
+            modal.style.display = 'none';
+            modalVid.pause();
+            modalVid.src = '';
+            modalImg.src = '';
+        }
+
+        // Modal do botão especial
+        function abrirModalVideo() {
+            const modal = document.getElementById("videoEspecialModal");
+            const video = document.getElementById("videoEspecial");
+            video.src = "fotos/start/VID_20250417_065623.mp4";
+            modal.style.display = "flex";
+        }
+
+        function fecharModalVideo() {
+            const modal = document.getElementById("videoEspecialModal");
+            const video = document.getElementById("videoEspecial");
+            modal.style.display = "none";
+            video.pause();
+            video.src = "";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -248,7 +248,7 @@
 
     <!-- Modal exclusivo do vídeo especial -->
     <div class="modal" id="videoEspecialModal" onclick="fecharModalVideo()">
-        <video id="videoEspecial" class="modal-content" controls></video>
+        <iframe id="videoEspecialIframe" class="modal-content" allow="autoplay" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <style>
@@ -309,17 +309,16 @@
         // Modal do botão especial
         function abrirModalVideo() {
             const modal = document.getElementById("videoEspecialModal");
-            const video = document.getElementById("videoEspecial");
-            video.src = "https://drive.google.com/uc?export=preview&id=1RXMug14KzgHjRbqK1zUQzarXqp5iJjOb";
+            const iframe = document.getElementById("videoEspecialIframe");
+            iframe.src = "https://drive.google.com/file/d/1RXMug14KzgHjRbqK1zUQzarXqp5iJjOb/preview";
             modal.style.display = "flex";
         }
-
+        
         function fecharModalVideo() {
             const modal = document.getElementById("videoEspecialModal");
-            const video = document.getElementById("videoEspecial");
+            const iframe = document.getElementById("videoEspecialIframe");
             modal.style.display = "none";
-            video.pause();
-            video.src = "";
+            iframe.src = "";
         }
     </script>
 
